@@ -15,6 +15,7 @@ if __name__ == "__main__":
              Item(name="Backstage passes to a TAFKAL80ETC concert", sell_in=10, quality=49),
              Item(name="Backstage passes to a TAFKAL80ETC concert", sell_in=5, quality=49),
              Item(name="Conjured Mana Cake", sell_in=3, quality=6),  # <-- :O
+             Item(name="Aged Brie Conjured", sell_in=3, quality=6),  # <-- :O
             ]
 
     days = 6

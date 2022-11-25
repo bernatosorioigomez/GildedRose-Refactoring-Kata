@@ -13,25 +13,25 @@ class GildedRoseTest(unittest.TestCase):
         self.assertEqual(0, items[0].quality)
         self.assertEqual(-1, items[0].sell_in)
 
-        items = [Item("Conjured foo", 5, 5)]
+        items = [Item("Conjured foo", 5, 2)]
         gilded_rose = GildedRose(items)
         gilded_rose.update_quality()
 
         self.assertEqual("Conjured foo", items[0].name)
         self.assertEqual(3, items[0].quality)
-        self.assertEqual(4, items[0].sell_in)
+        self.assertEqual(1, items[0].sell_in)
 
         gilded_rose.update_quality()
 
         self.assertEqual("Conjured foo", items[0].name)
         self.assertEqual(1, items[0].quality)
-        self.assertEqual(3, items[0].sell_in)
+        self.assertEqual(0, items[0].sell_in)
 
         gilded_rose.update_quality()
 
         self.assertEqual("Conjured foo", items[0].name)
         self.assertEqual(0, items[0].quality)
-        self.assertEqual(2, items[0].sell_in)
+        self.assertEqual(-1, items[0].sell_in)
 
 
 
